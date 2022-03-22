@@ -4,15 +4,21 @@
   text-align: center;
 }
 
-.jobs-container .jobs-list .other-jobs-container .job-card, .jobs-container .jobs-list .first-job {
+.jobs-container .jobs-list .job-card-cover, .jobs-container .jobs-list .other-jobs-container .job-card, .jobs-container .jobs-list .first-job {
   background-size: cover;
   background-position: center;
 }
 
 .jobs-container .jobs-list .other-jobs-container .job-card .job-card-title, .jobs-container .jobs-list .first-job .job-card-title, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-cover, .jobs-container .jobs-list .first-job .job-card-cover, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-description, .jobs-container .jobs-list .first-job .job-card-description {
   opacity: 0;
+  transition: 0.5s;
 }
-.jobs-container .jobs-list .other-jobs-container .job-card .job-card-title:hover .job-card-title, .jobs-container .jobs-list .first-job .job-card-title:hover .job-card-title, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-title:hover .job-card-cover, .jobs-container .jobs-list .first-job .job-card-title:hover .job-card-cover, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-title:hover .job-card-description, .jobs-container .jobs-list .first-job .job-card-title:hover .job-card-description, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-cover:hover .job-card-title, .jobs-container .jobs-list .first-job .job-card-cover:hover .job-card-title, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-cover:hover .job-card-cover, .jobs-container .jobs-list .first-job .job-card-cover:hover .job-card-cover, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-cover:hover .job-card-description, .jobs-container .jobs-list .first-job .job-card-cover:hover .job-card-description, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-description:hover .job-card-title, .jobs-container .jobs-list .first-job .job-card-description:hover .job-card-title, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-description:hover .job-card-cover, .jobs-container .jobs-list .first-job .job-card-description:hover .job-card-cover, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-description:hover .job-card-description, .jobs-container .jobs-list .first-job .job-card-description:hover .job-card-description {
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .other-jobs-container .job-card .job-card-title, .jobs-container .jobs-list .first-job .job-card-title, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-cover, .jobs-container .jobs-list .first-job .job-card-cover, .jobs-container .jobs-list .other-jobs-container .job-card .job-card-description, .jobs-container .jobs-list .first-job .job-card-description {
+    opacity: 1;
+  }
+}
+.jobs-container .jobs-list .other-jobs-container .job-card:hover .job-card-title, .jobs-container .jobs-list .first-job:hover .job-card-title, .jobs-container .jobs-list .other-jobs-container .job-card:hover .job-card-cover, .jobs-container .jobs-list .first-job:hover .job-card-cover, .jobs-container .jobs-list .other-jobs-container .job-card:hover .job-card-description, .jobs-container .jobs-list .first-job:hover .job-card-description {
   opacity: 1;
 }
 
@@ -62,6 +68,16 @@ li {
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 425px) {
+  #main-banner {
+    height: 100vh;
+  }
+}
+@media (max-width: 425px) {
+  #main-banner nav {
+    display: none;
+  }
+}
 #main-banner .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -72,6 +88,11 @@ li {
   padding: 1.5rem 2rem;
   background: #000;
   z-index: 10;
+}
+@media (max-width: 425px) {
+  #main-banner .navbar-container {
+    padding: 1rem;
+  }
 }
 #main-banner .navbar-container .brandLogo {
   color: #fff;
@@ -101,6 +122,11 @@ li {
   color: #fff;
   display: none;
 }
+@media (max-width: 425px) {
+  #main-banner .navbar-container .fas-fabars {
+    display: block;
+  }
+}
 #main-banner .title-container {
   color: #fff;
   display: flex;
@@ -108,6 +134,12 @@ li {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+@media (max-width: 425px) {
+  #main-banner .title-container {
+    text-align: center;
+    padding: 2rem;
+  }
 }
 #main-banner .title-container h2 {
   font-size: 3rem;
@@ -129,12 +161,23 @@ li {
   justify-content: space-around;
   padding: 2rem;
 }
+@media (max-width: 425px) {
+  .services-container .services-card-container {
+    padding: 2rem 0;
+  }
+}
 .services-container .services-card {
   width: 30%;
   margin: 1%;
   padding: 2rem;
   border: 1px solid #ccc;
   transition: 0.3s;
+}
+@media (max-width: 425px) {
+  .services-container .services-card {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
 }
 .services-container .services-card i {
   color: #ff5200;
@@ -159,9 +202,19 @@ li {
   background: #e5eaff;
   padding: 3rem;
 }
+@media (max-width: 425px) {
+  .jobs-container {
+    padding: 2rem;
+  }
+}
 .jobs-container .jobs-list {
   display: flex;
   padding: 2rem 0;
+}
+@media (max-width: 425px) {
+  .jobs-container .jobs-list {
+    flex-direction: column;
+  }
 }
 .jobs-container .jobs-list .first-job {
   width: 30%;
@@ -172,10 +225,24 @@ li {
   cursor: pointer;
   transition: 0.5s;
 }
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .first-job {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+}
 .jobs-container .jobs-list .other-jobs-container {
   display: flex;
   flex-wrap: wrap;
   width: 68%;
+}
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .other-jobs-container {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 .jobs-container .jobs-list .other-jobs-container .job-card {
   width: 46%;
@@ -184,6 +251,14 @@ li {
   cursor: pointer;
   margin-bottom: 15px;
   margin-right: 15px;
+}
+@media (max-width: 425px) {
+  .jobs-container .jobs-list .other-jobs-container .job-card {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
 }
 .jobs-container .jobs-list .other-jobs-container #job2 {
   background-image: url("../img/job2.jpg");
@@ -203,9 +278,104 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 1.75rem;
+  padding: 0 20px;
   background-color: rgba(0, 0, 0, 0.6);
   border: 3px solid #ff5200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.jobs-container .jobs-list .job-card-title, .jobs-container .jobs-list .job-card-description {
+  color: white;
+  text-align: center;
+}
+.jobs-container .jobs-list .job-card-title {
+  font-size: 1.5rem;
+}
+.jobs-container .jobs-list .job-card-description {
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #1d1d1d;
+  color: #8b8e94;
+  padding: 5rem 2rem;
+}
+footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 425px) {
+  footer .footer-container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+footer .footer-container .footer-title {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+footer .footer-desc-container, footer .footer-links-container {
+  width: 50%;
+}
+@media (max-width: 425px) {
+  footer .footer-desc-container, footer .footer-links-container {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+footer .footer-desc-container p {
+  width: 80%;
+  line-height: 1.3;
+}
+@media (max-width: 425px) {
+  footer .footer-desc-container p {
+    width: 100%;
+  }
+}
+footer .footer-links-container {
+  display: flex;
+}
+@media (max-width: 425px) {
+  footer .footer-links-container {
+    flex-direction: column;
+  }
+}
+footer .footer-links-container-list {
+  padding: 0 1rem;
+}
+@media (max-width: 425px) {
+  footer .footer-links-container-list {
+    margin-bottom: 2rem;
+  }
+}
+footer .footer-links-container-list li {
+  margin-bottom: 0.5rem;
+}
+footer .footer-links-container-list li a {
+  color: #8b8e94;
+  transition: 0.5s;
+}
+footer .footer-links-container-list li a:hover {
+  color: #fff;
+}
+footer .footer-copyright-container {
+  width: 100%;
+  margin-top: 3rem;
+}
+@media (max-width: 425px) {
+  footer .footer-copyright-container {
+    text-align: center;
+  }
+}
+footer .footer-copyright-container p {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

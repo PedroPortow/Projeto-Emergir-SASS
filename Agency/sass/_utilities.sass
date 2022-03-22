@@ -20,6 +20,11 @@
 @mixin text-shadow
     text-shadow: 3px 2px $black
 
+///////////////////MOBILE/////////////////////////
+@mixin mobile
+    @media (max-width: 425px)
+        @content
+
 %section-title
     font-size: 3rem
     margin-top: 2rem
@@ -30,12 +35,17 @@
     background-position: center
 
 %card-hover
-    .job-card-title, .job-card-cover, .job-card-description
+    .job-card-title, .job-card-cover,.job-card-description
         opacity: 0
+        transition: .5s
 
-        &:hover
-            .job-card-title, .job-card-cover, .job-card-description
-                opacity: 1
+        @include mobile
+            opacity: 1
+
+    &:hover
+        .job-card-title, .job-card-cover,.job-card-description
+            opacity: 1
+
 .btn
     padding: .6rem 1rem
     border: 1px solid $light
