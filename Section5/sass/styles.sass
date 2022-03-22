@@ -1,0 +1,54 @@
+@import 'variables'
+@import 'button'
+@import 'mixins'
+@import 'plugins'
+@import 'functions'
+
+body
+    margin: 20px
+
+.p-esp
+    @include special
+
+h2
+    @include special
+
+.esp-menor
+    @include espacamento(10px, 10px)
+    @include custom-border(solid, red)
+    @extend %font-pattern
+.esp-medio
+    @include espacamento(15px, 15px)
+    @include custom-border(solid, blue, 12px)
+    @include colors($background: red)
+.esp-maior
+    @include espacamento(25px, 25px)
+    @include custom-border(dotted, green, 4px)
+    @include colors($background: green, $font: #991155)
+
+#container-menor
+    width: 100px * 5
+    @include custom-border(solid,green)
+
+#container-maior
+    @include custom-border(solid, red)
+    width: 25rem * (2 / 2) + 10
+
+.fonte-pequena
+    font-size: 5px
+    color: text-color(5)
+
+.teste1
+    width: custom-width()
+    background: red
+
+.teste2
+    width: custom-width($width: 1000px)
+    background: blue
+
+$fonts: 40px, 60px, 100px
+
+@each $font in $fonts
+    .title-#{$font}
+        font-size: $fonts
+        line-height: $font * 1.2

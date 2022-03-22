@@ -1,0 +1,72 @@
+@import 'variables'
+
+div, main
+    background: $bg-color
+
+    p, h2
+        color: blue
+        margin: #{$mx + 10px}
+
+main
+    .red
+        color: red
+
+li
+    color: purple
+
+ol
+
+    > li
+        color: yellow
+
+a
+    text-decoration: none
+    color: green
+    transition: .5s
+    padding: 10px
+    border: 1px solid green
+    display: block
+    width: 150px
+    text-align: center
+
+    &:hover
+        background: green
+        color: white
+
+.container
+    background: #ccc
+    padding: 20px
+    margin: 20px
+
+    &-content
+        color: red
+
+.spacing
+    padding: 200px
+
+.btn
+    padding: 10px 20px
+    border: 1px solid blue
+    border-radius: 5px
+    color: #fff
+    background: blue
+    cursor: pointer
+    margin: 5px
+
+    &-sucess
+        background: green
+        border-color: green
+
+%base-title-style
+    border-bottom: 2px dotted blue
+    padding: 10px
+    background: red
+    text-align: center
+
+.title
+    font-size: 30px
+    @extend %base-title-style
+
+.sub-title
+    font-size: 25px
+    @extend %base-title-style

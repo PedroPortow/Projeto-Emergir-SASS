@@ -1,0 +1,11 @@
+@function text-color($size)
+    $color: black
+    @if $size > 10
+        $color: red
+    @else
+        $color: blue
+
+    @return $color
+
+@function custom-width($width: 200px, $division: 2)
+    @return $width / $division

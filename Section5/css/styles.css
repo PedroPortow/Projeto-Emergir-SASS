@@ -1,0 +1,96 @@
+.btn {
+  background: red;
+  color: white;
+  padding: 12px 10px;
+  border-radius: 5px;
+}
+
+.esp-menor {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 20px;
+}
+
+.p-esp {
+  background: red;
+  color: white;
+}
+.p-esp:hover {
+  color: blue;
+}
+
+h2 {
+  background: red;
+  color: white;
+}
+h2:hover {
+  color: blue;
+}
+
+.esp-menor {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid red;
+}
+
+.esp-medio {
+  padding: 15px;
+  margin: 15px;
+  border: 12px solid blue;
+  color: #000;
+  background: red;
+}
+
+.esp-maior {
+  padding: 25px;
+  margin: 25px;
+  border: 4px dotted green;
+  color: #991155;
+  background: green;
+}
+
+#container-menor {
+  width: 500px;
+  border: 1px solid green;
+}
+
+#container-maior {
+  border: 1px solid red;
+  width: 35rem;
+}
+
+.fonte-pequena {
+  font-size: 5px;
+  color: blue;
+}
+
+.teste1 {
+  width: 100px;
+  background: red;
+}
+
+.teste2 {
+  width: 500px;
+  background: blue;
+}
+
+.title-40px {
+  font-size: 40px, 60px, 100px;
+  line-height: 48px;
+}
+
+.title-60px {
+  font-size: 40px, 60px, 100px;
+  line-height: 72px;
+}
+
+.title-100px {
+  font-size: 40px, 60px, 100px;
+  line-height: 120px;
+}
+
+/*# sourceMappingURL=styles.css.map */
