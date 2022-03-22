@@ -1,0 +1,61 @@
+@use '../1-base/_variables'
+@use 'mixins'
+@use '../3-modules/_button'
+@use '../1-base/_base-mixins'
+
+.timer
+    background-color: variables.$section-bg-color
+    padding: 5rem 0
+
+    &-wrapper
+        @include mixins.wrapper-adjust
+        flex-direction: column
+        height: fit-content
+        align-items: center
+        justify-content: center
+
+        .circles-row
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            width: 40%
+            margin-bottom: 2rem
+            flex-wrap: wrap
+
+            span
+                background-color: variables.$primary-color
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 50%
+                flex-direction: column
+                padding: 2rem 2.5rem
+
+                @include base-mixins.mobile
+                    margin: .5rem
+
+                h3
+                    color: white
+                    font-size: 1.5rem
+
+                p
+                    color: white
+                    font-size: 1rem
+
+        .text-wrapper
+            display: flex
+            flex-direction: column
+            text-align: center
+            justify-content: center
+            align-items: center
+
+            h2
+                font-size: 2rem
+                text-transform: uppercase
+                margin-bottom: 1rem
+
+            p
+                font-size: 1.5rem
+                text-transform: uppercase
+                opacity: 0.8
+                margin-bottom: 2rem

@@ -1,0 +1,29 @@
+@use '../1-base/_variables'
+@use '../1-base/_base-mixins'
+
+#header
+    background: variables.$secondary-bg-color
+    padding: 10px 0
+
+    @include base-mixins.mobile
+        display: none
+
+.headerWrapper
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    max-width: variables.$container-width
+    margin: 0 auto
+    color: white //Temp
+    align-items: center
+
+.header-information-left, .header-information-right
+    display: flex
+    flex-direction: row
+
+    p
+        padding: 0 .5rem
+        font-size: 1rem
+
+        i
+            padding: 0 0.3rem

@@ -1,0 +1,86 @@
+@use '../1-base/_variables'
+@use 'mixins'
+@use '../3-modules/_button'
+@use '../1-base/_base-mixins'
+
+#navbar
+    background-color: variables.$bg-color
+    padding: 10px 0
+    border-bottom: 3px solid variables.$primary-color
+    height: fit-content
+
+    .navWrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        max-width: variables.$container-width
+        margin: 0 auto
+        color: white //Temp
+        align-items: center
+        flex-wrap: wrap
+        height: fit-content
+
+        @include base-mixins.mobile
+            justify-content: center
+            align-items: center
+
+            .navBrand,.navInput, .navCart
+                margin: 1rem
+
+        .navBrand
+            display: flex
+            flex-direction: row
+
+            h1
+                font-size: 3rem
+                font-weight: 800
+
+                i
+                    font-size: 2rem
+
+        .navInput
+            #search
+                @include mixins.rounded-input
+
+        .navCart
+            display: flex
+            flex-direction: row
+
+            &-fav, &-cart
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 0 20px
+
+                i
+                    color: white
+
+                a
+                    color: white
+
+.littleNav
+    border-bottom: 2px solid variables.$section-bg-color
+    padding: 10px 0
+
+    @include base-mixins.mobile
+        display: none
+
+    &-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: flex-start
+        max-width: variables.$container-width
+        margin: 0 auto
+        color: white //Temp
+        align-items: center
+        flex-wrap: wrap
+
+        a
+            align-self: flex-start
+            margin: 0px 1rem
+            border-bottom: 2px solid transparent
+
+            &:hover
+                color: variables.$primary-color
+                border-bottom: 1px solid variables.$primary-color

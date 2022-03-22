@@ -1,0 +1,80 @@
+@use '../1-base/_variables'
+@use 'mixins'
+@use '../1-base/_base-mixins'
+@use '../3-modules/_button'
+
+.products1
+    padding: 3rem 0
+
+    &-wrapper
+        @include mixins.wrapper-adjust
+        flex-direction: column
+
+        @include base-mixins.mobile
+            padding: 0 1rem
+
+        h2
+            font-size: 2rem
+            text-transform: uppercase
+            margin-bottom: 2rem
+
+        .products-row
+            display: flex
+            justify-content: space-between
+            flex-direction: row
+            flex-wrap: wrap
+
+            @include base-mixins.mobile
+                justify-content: center
+
+            .product-card
+                display: flex
+                border: 1px solid variables.$gray-text-color
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                width: 17rem
+                padding: 1rem
+                height: fit-content
+
+                @include base-mixins.mobile
+                    width: 100%
+                    margin: 1rem
+
+                .label.new
+                    align-self: flex-end
+                    background: variables.$primary-color
+                    padding: 5px
+                    color: white
+                    text-transform: uppercase
+                    font-weight: 400
+
+                .label-outline
+                    align-self: flex-end
+                    background: transparet
+                    border: 1px solid variables.$primary-color
+                    padding: 5px
+                    color: variables.$primary-color
+                    text-transform: uppercase
+                    font-weight: 400
+
+                img
+                    max-width: 100%
+                    z-index: 1
+
+                .category, .product-name, .product-price, .rating-box, .btn
+                    margin: 0.5rem 0
+
+                .category
+                    text-transform: uppercase
+                    color: variables.$gray-text-color
+
+                .product-name
+                    text-transform: uppercase
+                    font-size: 1.2rem
+                    font-weight: 700
+
+                .product-price
+                    font-size: 1.5rem
+                    font-weight: 700
+                    color: variables.$primary-color
